@@ -1,0 +1,18 @@
+html * {
+    font-family: sans-serif;
+}
+
+img {
+    max-width: 200px;
+    margin: auto;
+    padding: 50px;
+    display: block;
+}
+
+a{
+    text-decoration: none;
+}
+
+a:hover{
+    color: blue;
+}

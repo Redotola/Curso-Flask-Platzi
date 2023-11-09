@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% import 'macros.html' as macros %}
+
+{% block title %}
+    {{ super() }}
+    Welcome
+{% endblock %}
+
+{% block content %}
+    <!-- To define a strcuture control this is the syntax -->
+{% if user_ip %}
+    <h1>Hello World Platzi, tu IP es {{ user_ip }}<h1>
+{% else %}
+    <!-- Calls the url_for function which returns the url of the function
+    that is linked -->
+    <a href = "{{ url_for('index') }}"> Ir a inicio </a> 
+{% endif %}
+
+<ul>
+    <!-- Iter the element that pass from the 
+    dictionary in a list -->
+    {% for todo in todos %}
+        <!-- Pass the variable todo in a macro and list
+        the elements -->
+        {{ macros.render_todo(todo) }}
+    {% endfor %}
+    
+</ul>
+{% endblock %}

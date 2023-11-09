@@ -1,0 +1,10 @@
+<!-- Navbar -->
+<nav>
+    <ul>
+        <!-- Link an image from the folder static/images to this element -->
+        <img src = "{{ url_for('static', filename = 'images/flask.png')}}" alt = "Flask Logo"> 
+        <li><a href = "{{ url_for('index') }}"> Ir a inicio </a></li>
+        <li><a href = "https://platzi.com"> Ir a Platzi </a></li>
+        <li><a href = "https://flask.palletsprojects.com/en/3.0.x/"> Ir a la documentacion de Flask </a></li>
+    </ul>
+</nav>
