@@ -21,8 +21,9 @@
     <!--<form action = "{{ url_for('hello') }}" method = "POST"></form>
     {{ login_form.username }}
     {{ login_form.username.label }}-->
-    
-    {{ render_form(login_form) }}
+    <form action="{{ url_for('hello') }}" method = "POST">
+        {{ render_form(login_form) }}
+    </form>
 
 </div>
 

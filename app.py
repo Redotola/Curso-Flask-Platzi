@@ -1,4 +1,4 @@
-from flask import Flask, request, make_response, redirect, render_template, session
+from flask import Flask, request, make_response, redirect, render_template, session, abort
 from flask_bootstrap import Bootstrap5
 import secrets
 from flask_wtf import FlaskForm
@@ -17,7 +17,7 @@ def not_found(error):
     context = {
         'error' : error,
         'status' : 404,
-        'status' : 'Element not found, error 404'
+        'text' : 'Element not found, error 404'
     }
     return render_template('error.html', **context) # return the render of template and error
 
@@ -26,9 +26,14 @@ def internal_error_server(error):
     context = {
         'error' : error,
         'status' : 500,
-        'status' : 'Error de servidor, lo sentimos seguimos trabajando para solucionarlo...'
+        'text' : 'Error de servidor, lo sentimos seguimos trabajando para solucionarlo...'
     }
     return render_template('error.html', **context) # render template
+
+@app.route('/error')
+def error_500():
+    abort(500)
+     
 
 # test list
 todos = ["Wake Up", "Drink coffee", "Code", "Sleep"]

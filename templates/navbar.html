@@ -1,34 +1,23 @@
 <!-- Navbar -->
-<!--
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Navbar</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href=" {{ url_for('hello') }} ">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./hell.html">Error 404</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-          </li>
-        </ul>
-      </div>  
-    </div>
-</nav>
--->
-<!---
+
+<ul class="nav nav-pills nav-fill">
+  <li class="nav-item">
+    <a class="nav-link active" href="{{ url_for('hello') }}">HOME</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="./hell.html">Error 404</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="{{ url_for('error_500') }}">Error 500</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link disabled" href="#">Disabled</a>
+  </li>
+</ul>
+
 <nav>
     <ul>
-         Link an image from the folder static/images to this element 
+        <!--Link an image from the folder static/images to this element--> 
         <img src = "{{ url_for('static', filename = 'images/flask.png')}}" alt = "Flask Logo"> 
         <li><a href = "{{ url_for('index') }}"> Go to home </a></li>
         <li><a href = "https://platzi.com"> Go to Platzi </a></li>
@@ -37,8 +26,9 @@
         <li><a href = "https://bootstrap-flask.readthedocs.io/en/stable/">Bootstrap-Flask</a></li>
     </ul>
 </nav>
---->
 
+
+<!--
 <div class="navbar navbar-inverse" role="navigation">
   <div class="container">
       <div class="navbar-header">
@@ -66,3 +56,4 @@
       </div>
   </div>
 </div>
+-->
