@@ -1,4 +1,4 @@
-# Curso-Flask-Platzi
+# Course-Flask-Platzi
 In this course I learn about the Micro Framework "Flask" that is really useful web tool
 
 # Create environment
@@ -23,3 +23,10 @@ echo FLASK_APP
 
 # Run the server 
 flask run
+
+# Activate Envireonment Development
+( Linux )
+export FLASK_ENV=development
+
+( Windows )
+set FLASK_ENV=development

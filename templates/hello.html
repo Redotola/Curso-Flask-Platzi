@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% import 'macros.html' as macros %}
+{% from 'bootstrap5/form.html' import render_form %}
 
 {% block title %}
     {{ super() }}
@@ -9,12 +10,21 @@
 {% block content %}
     <!-- To define a strcuture control this is the syntax -->
 {% if user_ip %}
-    <h1>Hello World Platzi, tu IP es {{ user_ip }}<h1>
+    <h1>Hello World Platzi, your IP is {{ user_ip }}<h1>
 {% else %}
     <!-- Calls the url_for function which returns the url of the function
     that is linked -->
-    <a href = "{{ url_for('index') }}"> Ir a inicio </a> 
+    <ul><li><a href = "{{ url_for('index') }}"> Go to home </a></li></ul>
 {% endif %}
+
+<div class = "container">
+    <!--<form action = "{{ url_for('hello') }}" method = "POST"></form>
+    {{ login_form.username }}
+    {{ login_form.username.label }}-->
+    
+    {{ render_form(login_form) }}
+
+</div>
 
 <ul>
     <!-- Iter the element that pass from the 
@@ -24,6 +34,5 @@
         the elements -->
         {{ macros.render_todo(todo) }}
     {% endfor %}
-    
 </ul>
 {% endblock %}
