@@ -2,10 +2,10 @@
 
 {% block title %}
 {{ super() }}
-    {{ status }}
+    {{ status }} <!--Ttitle is the status of the response-->
 {% endblock %}
 
 {% block content %}
-    <h1>{{ text }}</h1>
-    <p>{{ error }}</p>
+    <h1>{{ text }}</h1> <!--The message of the error-->
+    <p>{{ error }}</p> <!--The description of the error-->
     {% endblock %} 

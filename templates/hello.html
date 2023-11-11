@@ -8,32 +8,37 @@
 {% endblock %}
 
 {% block content %}
-    <!-- To define a strcuture control this is the syntax -->
-{% if user_ip %}
-    <h1>Hello World Platzi, your IP is {{ user_ip }}<h1>
-{% else %}
-    <!-- Calls the url_for function which returns the url of the function
-    that is linked -->
-    <ul><li><a href = "{{ url_for('index') }}"> Go to home </a></li></ul>
-{% endif %}
 
-<div class = "container">
-    <!--<form action = "{{ url_for('hello') }}" method = "POST"></form>
-    {{ login_form.username }}
-    {{ login_form.username.label }}-->
-    <form action="{{ url_for('hello') }}" method = "POST">
-        {{ render_form(login_form) }}
-    </form>
+    {% if username %}
+        <h1>Bienvenido, {{ username | capitalize }}</h1> <!-- Filter to capitalize the first letter-->
+    {% endif %}
 
-</div>
+        <!-- To define a strcuture control this is the syntax -->
+    {% if user_ip %}
+        <h1>Hello World Platzi, your IP is {{ user_ip }}<h1>
+    {% else %}
+        <!-- Calls the url_for function which returns the url of the function
+        that is linked -->
+        <ul><li><a href = "{{ url_for('index') }}"> Go to home </a></li></ul>
+    {% endif %}
 
-<ul>
-    <!-- Iter the element that pass from the 
-    dictionary in a list -->
-    {% for todo in todos %}
-        <!-- Pass the variable todo in a macro and list
-        the elements -->
-        {{ macros.render_todo(todo) }}
-    {% endfor %}
-</ul>
+    <div class = "container">
+        <!--<form action = "{{ url_for('hello') }}" method = "POST"></form>
+        {{ login_form.username }}
+        {{ login_form.username.label }}-->
+        <form action="{{ url_for('hello') }}" method = "POST">
+            {{ render_form(login_form) }}
+        </form>
+
+    </div>
+
+    <ul>
+        <!-- Iter the element that pass from the 
+        dictionary in a list -->
+        {% for todo in todos %}
+            <!-- Pass the variable todo in a macro and list
+            the elements -->
+            {{ macros.render_todo(todo) }}
+        {% endfor %}
+    </ul>
 {% endblock %}
