@@ -37,4 +37,4 @@ gcloud init<!--Initialize the console command-->
 gcloud auth login <!--Run the login in browser-->
 
 # Create a project in Google Cloud console
-<img src = "https://github.com/Redotola/Curso-Flask-Platzi/main/read_img/gcloud.png">
+<img src = "https://github.com/Redotola/Curso-Flask-Platzi/blob/main/assets/gcloud.png">
