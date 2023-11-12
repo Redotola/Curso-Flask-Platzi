@@ -24,7 +24,7 @@ echo FLASK_APP
 # Run the server 
 flask run
 
-# Activate Envireonment Development
+# Activate Environment Development
 ( Linux )
 export FLASK_ENV=development
 
@@ -53,3 +53,5 @@ gcloud auth login
 <img src = "https://github.com/Redotola/Curso-Flask-Platzi/blob/main/assets/gcloud2.png">
 
 <img src = "https://github.com/Redotola/Curso-Flask-Platzi/blob/main/assets/gcloud3.png">
+
+<img src = "https://github.com/Redotola/Curso-Flask-Platzi/blob/main/assets/gcloud4.png">
