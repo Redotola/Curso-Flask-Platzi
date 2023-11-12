@@ -47,7 +47,6 @@ gcloud auth login
 # Create a project in Google Cloud console
 <img src = "https://github.com/Redotola/Curso-Flask-Platzi/blob/main/assets/gcloud.png">
 
-
 <img src = "https://github.com/Redotola/Curso-Flask-Platzi/blob/main/assets/gcloud1.png">
 
 <img src = "https://github.com/Redotola/Curso-Flask-Platzi/blob/main/assets/gcloud2.png">
@@ -55,3 +54,7 @@ gcloud auth login
 <img src = "https://github.com/Redotola/Curso-Flask-Platzi/blob/main/assets/gcloud3.png">
 
 <img src = "https://github.com/Redotola/Curso-Flask-Platzi/blob/main/assets/gcloud4.png">
+
+<img src = "https://github.com/Redotola/Curso-Flask-Platzi/blob/main/assets/gcloud5.png">
+
+<img src = "https://github.com/Redotola/Curso-Flask-Platzi/blob/main/assets/gcloud6.png">
