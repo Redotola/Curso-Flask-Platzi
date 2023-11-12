@@ -33,12 +33,15 @@ set FLASK_ENV=development
 
 # Google Cloud commands CLI
 - Verify if the gcloud instance is already installed
+
 find gcloud
 
 - Initialize the console command
+
 gcloud init
 
 - Run the login in browser
+
 gcloud auth login 
 
 # Create a project in Google Cloud console
