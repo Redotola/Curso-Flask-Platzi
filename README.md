@@ -30,3 +30,12 @@ export FLASK_ENV=development
 
 ( Windows )
 set FLASK_ENV=development
+
+# Google Cloud commands CLI
+find gcloud <!--Verify if the gcloud instance is already installed-->
+gcloud init<!--Initialize the console command-->
+gcloud auth login <!--Run the login in browser-->
+
+# Create a project in Google Cloud console
+<span>https://github.com/Redotola/Curso-Flask-Platzi/main/read_img/gcloud.png</span>
+
