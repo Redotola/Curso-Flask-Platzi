@@ -5,6 +5,7 @@ from wtforms.validators import DataRequired
 import unittest
 import secrets
 from flask_bootstrap import Bootstrap5
+from services import fire_store_service
 
 app = Flask(__name__) # the instance of Flask app is the name of the current file
 bootstrap = Bootstrap5(app) # create the instance of Bootstrap Flask with the name of app
@@ -39,11 +40,11 @@ def internal_error_server(error):
     }
     return render_template('error.html', **context) # render template
 
-@app.route('/error')
+@app.route('/error') #run the error 500 route 
 def error_500():
     abort(500)
 
-@app.cli.command()
+@app.cli.command() # cli command to run the environment of the test
 def test():
     tests = unittest.TestLoader().discover('tests')
     unittest.TextTestRunner().run(tests)
@@ -80,7 +81,11 @@ def hello():
         
         flash('Nombre de usuario registrado con exito', 'message')
         
-        return redirect(url_for('index'))
+        return redirect(url_for('index')) #redirect inside of the function to index to show the changes
+    
+    users = fire_store_service.get_users()
+    for user in users:
+        print(user)
     
     return render_template('hello.html', **context) # expand the dictionary 
 

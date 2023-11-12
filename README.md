@@ -1,5 +1,5 @@
 # Course-Flask-Platzi
-In this course I learn about the Micro Framework "Flask" that is really useful web tool
+In this course I learn about the Micro Framework "Flask" that is really useful web tool to create web applications with Python
 
 # Create environment
 virtualenv "name"
@@ -60,3 +60,13 @@ gcloud auth login
 <img src = "https://github.com/Redotola/Curso-Flask-Platzi/blob/main/assets/gcloud6.png">
 
 <img src = "https://github.com/Redotola/Curso-Flask-Platzi/blob/main/assets/gcloud7.png">
+
+# Set the ID project to access base
+<!-- Set the environment variable of the Google cloud project -->
+( Linux ) export GOOGLE_CLOUD_PROJECT='ID'
+( Windows ) set GOOGLE_CLOUD_PROJECT='ID' 
+
+or 
+
+<!-- Command to set the project ID in the gcloud CLI -->
+( Windows ) gcloud auth application-default set-quota-project "ID of the project"
