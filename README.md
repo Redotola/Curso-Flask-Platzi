@@ -63,10 +63,14 @@ gcloud auth login
 
 # Set the ID project to access base
 <!-- Set the environment variable of the Google cloud project -->
-( Linux ) export GOOGLE_CLOUD_PROJECT='ID'
-( Windows ) set GOOGLE_CLOUD_PROJECT='ID' 
+( Linux ) 
+export GOOGLE_CLOUD_PROJECT='ID'
+
+( Windows ) 
+set GOOGLE_CLOUD_PROJECT='ID' 
 
 or 
 
 <!-- Command to set the project ID in the gcloud CLI -->
-( Windows ) gcloud auth application-default set-quota-project "ID of the project"
+( Windows ) 
+gcloud auth application-default set-quota-project "ID of the project"
