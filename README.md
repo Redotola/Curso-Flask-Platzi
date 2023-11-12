@@ -58,3 +58,5 @@ gcloud auth login
 <img src = "https://github.com/Redotola/Curso-Flask-Platzi/blob/main/assets/gcloud5.png">
 
 <img src = "https://github.com/Redotola/Curso-Flask-Platzi/blob/main/assets/gcloud6.png">
+
+<img src = "https://github.com/Redotola/Curso-Flask-Platzi/blob/main/assets/gcloud7.png">
