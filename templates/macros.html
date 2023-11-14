@@ -1,4 +1,13 @@
+{% from 'bootstrap5/form.html' import render_form %}
 <!-- Create a macro that list all data of the variable -->
-{% macro render_todo(todo) %}
-    <li> Chores: {{ todo }} </li>
+{% macro render_todo(todo, delete_todo_form, update_todo_form) %}
+    <li class="list-group-item">  
+        <li class="list-group-item d-flex justify-content-between align-item-center">
+            <span class="badge badge-primary badge-pill"> {{ todo.to_dict().done }} </span>
+            Description: {{ todo.to_dict().description }}
+
+            {{ render_form(delete_todo_form, action=url_for('delete', todo_id=todo.id)) }}
+            {{ render_form(update_todo_form, action=url_for('update', todo_id=todo.id, done=todo.to_dict().done)) }}
+        </li>
+    </li>
 {% endmacro %}

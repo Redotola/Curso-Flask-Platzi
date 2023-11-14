@@ -30,3 +30,8 @@ nav{
 nav a:hover{
     background-color: purple;
 }
+
+span {
+    color: black;
+    background-color: white;
+}

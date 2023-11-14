@@ -10,7 +10,7 @@
 {% block content %}
 
     {% if username %}
-        <h1>Bienvenido, {{ username | capitalize }}</h1> <!-- Filter to capitalize the first letter-->
+        <h1>Welcome, {{ username | capitalize }}</h1> <!-- Filter to capitalize the first letter-->
     {% endif %}
 
         <!-- To define a strcuture control this is the syntax -->
@@ -22,23 +22,18 @@
         <ul><li><a href = "{{ url_for('index') }}"> Go to home </a></li></ul>
     {% endif %}
 
-    <div class = "container">
-        <!--<form action = "{{ url_for('hello') }}" method = "POST"></form>
-        {{ login_form.username }}
-        {{ login_form.username.label }}-->
-        <form action="{{ url_for('hello') }}" method = "POST">
-            {{ render_form(login_form) }}
-        </form>
-
+    <div>
+        <h2>Create a new to-do</h2>
+        {{ render_form(todo_form) }}
     </div>
 
-    <ul>
+    <ul class="list-group">
         <!-- Iter the element that pass from the 
         dictionary in a list -->
         {% for todo in todos %}
             <!-- Pass the variable todo in a macro and list
             the elements -->
-            {{ macros.render_todo(todo) }}
+            {{ macros.render_todo(todo, delete_todo_form, update_todo_form) }}
         {% endfor %}
     </ul>
 {% endblock %}

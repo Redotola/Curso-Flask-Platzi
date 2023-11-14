@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% from 'bootstrap5/form.html' import render_form %}
+
+<!--Ttitle is the status of the response-->
+{% block title %}
+    {{ super() }}
+    {{ status }} 
+{% endblock %}
+
+{% block content %}
+    <h1>User Login</h1>
+    <div class="container">
+        {{ render_form(login_form) }}
+    </div>
+{% endblock %} 

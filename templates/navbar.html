@@ -10,6 +10,15 @@
   <li class="nav-item">
     <a class="nav-link" href="{{ url_for('error_500') }}">Error 500</a>
   </li>
+  {% if current_user.is_authenticated %}
+    <li class="nav-item">
+      <a class="nav-link" href="{{ url_for('logout') }}">Logout</a>
+    </li>
+  {% else %}
+    <li class="nav-item">
+      <a class="nav-link" href="{{ url_for('signup') }}">Signup</a>
+    </li>
+  {% endif %}
   <li class="nav-item">
     <a class="nav-link disabled" href="#">Disabled</a>
   </li>
@@ -24,5 +33,8 @@
         <li><a href = "https://flask.palletsprojects.com/en/3.0.x/"> Go to the documentation of Flask </a></li>
         <li><a href = "https://getbootstrap.com">Bootstrap</a></li>
         <li><a href = "https://bootstrap-flask.readthedocs.io/en/stable/">Bootstrap-Flask</a></li>
-    </ul>
+        <li><a href = "https://flask-login.readthedocs.io/en/latest/#how-it-works">Flask-Login</a></li>
+        <li><a href = "https://console.cloud.google.com">Google Cloud</a></li>
+        
+      </ul>
 </nav>
